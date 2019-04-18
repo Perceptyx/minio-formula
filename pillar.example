@@ -10,3 +10,9 @@ minio:
   http_trace: 
   opts: "--address :9199"
 
+# **NOTE:** browser and drive_sync options will be ignored 
+# They are keep here for informational purposes.
+# Sadly "on" and "off" are intepreted as booleans by yaml 
+# so "True" and "False" are the values that are rendered 
+# in the /etc/default/minio file, and obviously minio just 
+# refuses to start as it doesn't recognises that values.
