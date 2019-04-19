@@ -1,0 +1,18 @@
+minio:
+  user: minio
+  group: minio
+  limit_nofile: 65536
+  access_key: AKIAIOSFODNN7EXAMPLE
+  secret_key: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+  volumes: http://node{1...6}/export{1...32}
+  browser: off
+  drive_sync: on
+  http_trace: 
+  opts: "--address :9199"
+
+# **NOTE:** browser and drive_sync options will be ignored 
+# They are keep here for informational purposes.
+# Sadly "on" and "off" are intepreted as booleans by yaml 
+# so "True" and "False" are the values that are rendered 
+# in the /etc/default/minio file, and obviously minio just 
+# refuses to start as it doesn't recognises that values.
