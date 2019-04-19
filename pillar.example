@@ -13,8 +13,8 @@ minio:
   volumes: http://node{1...6}/export{1...32}
   browser: off
   drive_sync: on
-  http_trace: 
-  opts: "--address :9199"
+  http_trace: /var/log/minio.log
+  port: 9000
 
 # **NOTE:** browser and drive_sync options will be ignored 
 # They are keep here for informational purposes.

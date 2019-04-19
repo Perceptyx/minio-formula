@@ -11,7 +11,7 @@
 {% set minio_browser = salt['pillar.get']('minio:browser') %}
 {% set minio_drive_sync = salt['pillar.get']('minio:drive_sync') %}
 {% set minio_http_trace = salt['pillar.get']('minio:http_trace') %}
-{% set minio_opts = salt['pillar.get']('minio:opts') %}
+{% set minio_port = salt['pillar.get']('minio:port') %}
 
 minio_systemd_service:
   file.managed:
@@ -41,4 +41,12 @@ minio_etc_default:
         minio_browser: {{ minio_browser }}
         minio_drive_sync: {{ minio_drive_sync }}
         minio_http_trace: {{ minio_http_trace }}
-        minio_opts: {{ minio_opts }}
+        minio_port: {{ minio_port }}
+
+minio_enable_service:
+  service.enabled:
+    - name: minio
+
+minio_start_service:
+  service.running:
+    - name: minio
