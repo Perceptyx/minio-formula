@@ -5,6 +5,7 @@ Salt State to Install and Configure Minio https://min.io/
 
 - [`user`](#user)
 - [`install`](#install)
+- [`log`](#log)
 - [`systemd`](#systemd)
 
 ### User
@@ -35,6 +36,17 @@ minio:
   platform: linux-amd64
   download_url: https://dl.min.io/server/minio/release/
   install_path: /usr/local/bin/
+```
+
+### Log
+
+- Creates the log file and give permissions for minio user and group:
+
+```yaml
+minio:
+  user: minio
+  group: minio
+  http_trace: /var/log/minio.log
 ```
 
 ### Systemd

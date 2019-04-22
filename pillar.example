@@ -10,7 +10,7 @@ minio:
   limit_nofile: 65536
   access_key: AKIAIOSFODNN7EXAMPLE
   secret_key: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
-  volumes: http://node{1...6}/export{1...32}
+  volumes: /tmp/test
   browser: off
   drive_sync: on
   http_trace: /var/log/minio.log
