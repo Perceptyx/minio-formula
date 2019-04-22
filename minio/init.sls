@@ -5,4 +5,5 @@
 include:
   - minio.user
   - minio.install
+  - minio.log
   - minio.systemd

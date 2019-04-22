@@ -17,4 +17,4 @@ minio_user:
     - name: {{ minio_user }}
     - shell: /sbin/nologin
     - uid: {{ minio_uid }}
-    - gid: {{ minio_guid }}
+    - gid: {{ minio_gid }}
