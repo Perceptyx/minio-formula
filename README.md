@@ -32,7 +32,7 @@ minio:
 minio:
   user: minio
   group: minio
-  release: minio.RELEASE.2019-04-18T21-44-59Z
+  release: minio.RELEASE.2021-11-03T03-36-36Z
   platform: linux-amd64
   download_url: https://dl.min.io/server/minio/release/
   install_path: /usr/local/bin/
